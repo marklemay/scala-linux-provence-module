@@ -1,4 +1,4 @@
-package edu.mit.ll.prov.analytics.lpm
+package scala_linux_provence_module
 
 import scodec.Codec
 import scala.reflect.io.File
@@ -43,8 +43,3 @@ class Stream2Iter[A](s: fs2.Stream[Task, A]) extends Iterator[A] {
   }
 
 }
-
-
-
-
-

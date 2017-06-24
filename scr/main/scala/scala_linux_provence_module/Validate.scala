@@ -1,10 +1,10 @@
-package edu.mit.ll.prov.analytics.lpm
+package scala_linux_provence_module
 
-import edu.mit.ll.prov.analytics.lpm.LpmMessage._
+import LpmMessage._
 import fs2.Stream
 import fs2.Task
 
-
+/** this confirms properties we expect to hold on lpm data */
 object Validate {
 
   //TODO: either return types more helpful??

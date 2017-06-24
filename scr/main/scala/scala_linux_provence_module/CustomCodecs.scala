@@ -1,4 +1,4 @@
-package edu.mit.ll.prov.analytics.lpm
+package scala_linux_provence_module
 
 import scodec.Codec
 import scala.reflect.io.File
@@ -40,7 +40,7 @@ object CustomCodecs {
   }
 
   /**
-   * a nieve string decoder that is the exact same as the old one
+   * a naive string decoder that is the exact same as the old one
    */
   //TODO: depricate this for utf8
   final class SimpleCharStr() extends Codec[String] {

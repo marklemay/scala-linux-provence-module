@@ -1,8 +1,8 @@
-package edu.mit.ll.prov.analytics.lpm
+package scala_linux_provence_module
 
 import scodec.codecs._
 
-import edu.mit.ll.prov.analytics.lpm.LpmMessage.lpmData
+import scala_linux_provence_module.LpmMessage.lpmData
 
 import scodec.stream.{ decode => D, StreamDecoder }
 

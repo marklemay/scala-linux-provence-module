@@ -1,4 +1,4 @@
-package edu.mit.ll.prov.analytics.lpm
+package scala_linux_provence_module
 
 import scodec.Codec
 import scala.reflect.io.File
@@ -18,11 +18,11 @@ import scodec.bits._
 
 import shapeless.{ :+:, Coproduct, CNil, Inl, Inr }
 import scodec.codecs.CoproductCodec
-import edu.mit.ll.prov.analytics.lpm.CustomCodecs._
+import scala_linux_provence_module.CustomCodecs._
 
 object LpmMessage {
 
-  /** all prov messages inherit from this */
+  /** all lpm messages inherit from this */
   sealed abstract class LpmMsg(val credid: Long)
 
   /** The "important" prov messages inherit from this */
@@ -203,7 +203,7 @@ object LpmMessage {
   val lpmData: Codec[LpmMsg] =
     (new Desc[Int, LpmMsg](uint8L,
       Map[Int, Codec[LpmMsg]](
-        0 -> bootCodec.upcast[LpmMsg], //TODO: there has got to be a cleaner way to do this without the upcast
+        0 -> bootCodec.upcast[LpmMsg], //TODO: cleaner way to do this without the upcast
         1 -> credForkCodec.upcast[LpmMsg],
         2 -> credFreeCodec.upcast[LpmMsg],
         3 -> setIdCodec.upcast[LpmMsg],

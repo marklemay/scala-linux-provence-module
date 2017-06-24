@@ -1,8 +1,8 @@
-package edu.mit.ll.prov.analytics.lpm
+package scala_linux_provence_module
 
 import scodec.codecs._
 import scodec.bits._
-import edu.mit.ll.prov.analytics.lpm.CustomCodecs._
+import CustomCodecs._
 
 import org.junit._
 import Assert._
